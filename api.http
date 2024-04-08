@@ -2,19 +2,19 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-  "title": "Novo evento 2",
+  "title": "Evento teste",
   "details": null,
-  "maximumAttendees": 1
+  "maximumAttendees": 5
 }
 
 ###
 
-POST http://localhost:3333/events/ffca838c-12f6-40c6-957f-d57d666dfb17/attendees
+POST http://localhost:3333/events/80883cab-11b3-4543-9f06-408c2369ae18/attendees
 Content-Type: application/json
 
 {
   "name": "Gabriel Freitas",
-  "email": "gabriel@rocketseat.com.br"
+  "email": "gabrielteste@rocketseat.com.br"
 }
 
 ###
@@ -24,3 +24,11 @@ GET http://localhost:3333/events/ffca838c-12f6-40c6-957f-d57d666dfb17
 ###
 
 GET http://localhost:3333/attendees/2/badge
+
+###
+
+GET http://localhost:3333/attendees/1/check-in
+
+###
+
+GET http://localhost:3333/events/675f88d9-83b6-4218-8dbd-e39e1553cede/attendees?query=g
